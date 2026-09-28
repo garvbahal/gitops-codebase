@@ -41,7 +41,7 @@ jobs:
       - name: Update image tag in kustomize overlay
         working-directory: ops
         run: |
-          sed -i "s/newTag: .*/newTag: ${{github.sha}}/" kubernetes/overlays/main/kustomization.yaml
+          sed -i "s/newTag: .*/newTag: ${{github.sha}}/" kubernetes/overlays/main/kustomization.yml
 
       - name: Commit and push ops changes
         working-directory: ops
